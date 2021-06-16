@@ -1,14 +1,67 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
+import '../../style.dart';
+import '../widgets/responsive_main_layout.dart';
+import '../widgets/svg_picture_wrapper.dart';
+
+// ignore: public_member_api_docs
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Some TExt'),
+    return ResponsiveMainLayout(
+      leftChild: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('WE CRAFT SOFTWARE', style: textStyleBodyTitle),
+          SizedBox(
+            height: insetSmall,
+          ),
+          AutoSizeText(
+            'From website to native mobile apps\n'
+            'modern design, maintainable code & scalable deploy\n'
+            'employ latest tech stack with industry standard',
+            style: textStyleBodySubTitle,
+            textAlign: TextAlign.center,
+            maxLines: 4,
+          ),
+          SizedBox(
+            height: insetMedium,
+          ),
+          _CallToActionButton(),
+        ],
       ),
-      body: Center(
-        child: Text('Home Screen'),
+      rightChild: SvgPictureWrapper(
+        assetLocation: 'assets/images/home-box.svg',
+      ),
+    );
+  }
+}
+
+class _CallToActionButton extends StatelessWidget {
+  const _CallToActionButton({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+      onPressed: () {},
+      padding: EdgeInsets.symmetric(
+        horizontal: 18,
+        vertical: 19,
+      ),
+      child: Text(
+        'GET IN TOUCH',
+        style: textStyleButton.copyWith(color: Colors.white),
+      ),
+      color: colorPrimary,
+      shape: ContinuousRectangleBorder(
+        borderRadius: BorderRadius.circular(18),
+        side: BorderSide(
+          color: colorTextBright,
+          width: 1,
+        ),
       ),
     );
   }

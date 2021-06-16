@@ -15,6 +15,10 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   auto_size_text: ^3.0.0-nullsafety.0
+  flutter_card_swipper: ^0.4.0
+  ionicons: ^0.1.2
+  flutter_svg: ^0.22.0
+  get: ^4.1.4
 
 dev_dependencies:
   effective_dart: ^1.3.0
@@ -24,3 +28,27 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: 'MPLUSRounded1c'
+      fonts:
+        - asset: fonts/MPLUSRounded1c-Regular.ttf
+          style: normal
+          weight: 400
+        - asset: fonts/MPLUSRounded1c-Bold.ttf
+          weight: 700
+    - family: 'NunitoSans'
+      fonts:
+        - asset: fonts/NunitoSans-Regular.ttf
+          style: normal
+          weight: 400
+        - asset: fonts/NunitoSans-Bold.ttf
+          weight: 700
+        - asset: fonts/NunitoSans-Black.ttf
+          weight: 800
+        - asset: fonts/NunitoSans-Light.ttf
+          weight: 300
+
