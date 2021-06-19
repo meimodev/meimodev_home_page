@@ -9,7 +9,7 @@ import 'home_screen.dart';
 import 'mobile_screen.dart';
 import 'web_screen.dart';
 
-// ignore: public_member_api_docs
+// ignore_for_file: public_member_api_docs,omit_local_variable_types,lines_longer_than_80_chars
 class SwipeControlScreen extends StatelessWidget {
   final List<Widget> _screens = [
     HomeScreen(),

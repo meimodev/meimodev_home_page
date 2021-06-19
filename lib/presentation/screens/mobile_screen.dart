@@ -1,9 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_card_swipper/flutter_card_swiper.dart';
 
 import '../../style.dart';
 import '../widgets/responsive_main_layout.dart';
+import '../widgets/rounded_background_icon.dart';
 import '../widgets/svg_picture_wrapper.dart';
 
 // ignore_for_file: public_member_api_docs
@@ -86,30 +86,6 @@ class MobileScreen extends StatelessWidget {
       ),
       rightChild: SvgPictureWrapper(
         assetLocation: 'assets/images/mobile_app_dev.svg',
-      ),
-    );
-  }
-}
-
-class RoundedBackgroundIcon extends StatelessWidget {
-  const RoundedBackgroundIcon({
-    Key? key,
-    required this.asset,
-  }) : super(key: key);
-
-  final String asset;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.white70,
-        ),
-        child: SvgPictureWrapper(
-          assetLocation: asset,
-        ),
       ),
     );
   }

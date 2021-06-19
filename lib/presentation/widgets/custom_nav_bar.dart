@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:ionicons/ionicons.dart';
-import 'package:meimodev_home_page/presentation/widgets/global_padding_wrapper.dart';
+import 'global_padding_wrapper.dart';
 
 import '../../style.dart';
 
@@ -18,17 +16,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             Expanded(
               flex: 3,
               child: Align(
-                alignment: Alignment.center,
-                child: Row(
-                  children: [
-                    Text('MEiMO Dev'),
-                  ],
+                alignment: Alignment.centerLeft,
+                child: Image.asset(
+                  'assets/images/logo_meimo.png',
+                  fit: BoxFit.contain,
+                  height: 100,
+                  width: 100,
                 ),
               ),
             ),
-            context.isPhone
-                ? SizedBox()
-                : Expanded(flex: 8, child: _NavBarRow())
+            SizedBox()
+            // : Expanded(flex: 8, child: _NavBarRow())
           ],
         ),
       ),
@@ -64,6 +62,7 @@ class _NavBarRowState extends State<_NavBarRow> {
 
   List<Widget> _buildNavMenus(List<String> list) {
     var res = <Widget>[];
+
     for (var name in list) {
       res.add(
         TextButton(
@@ -75,6 +74,14 @@ class _NavBarRowState extends State<_NavBarRow> {
           onPressed: () {
             setState(() {
               activeMenu = name;
+              // var currIndex = 0;
+              // for (var i = 0; i < list.length; i++) {
+              //   if (name == list[i]) {
+              //     currIndex = i;
+              //     c.index.value = currIndex;
+              //     break;
+              //   }
+              // }
             });
           },
           child: Text(

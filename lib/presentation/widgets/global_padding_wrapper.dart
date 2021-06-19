@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../style.dart';
 
@@ -24,7 +23,7 @@ class GlobalPaddingWrapper extends StatelessWidget {
     final screen = ScreenSizes(context);
 
     if (screen.isSmallScreen) {
-      return screen.width * .03125;
+      return screen.width * .03125 * 1.75;
     }
     if (screen.isMediumScreen) {
       return screen.width * .0625;
