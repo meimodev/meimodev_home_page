@@ -1,7 +1,7 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_static_maps_controller/google_static_maps_controller.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -17,16 +17,13 @@ class ContactScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
-            height: insetLarge,
-          ),
           Text(
             'DROP US A MESSAGE',
             style: textStyleBodyTitle,
             textAlign: TextAlign.center,
           ),
           SizedBox(
-            height: insetMedium,
+            height: insetMedium.h,
           ),
           ContactCard(),
           // Flexible(
@@ -49,11 +46,12 @@ class ContactCard extends StatelessWidget {
   }) : super(key: key);
 
   void _launchURL(String url) async => launch(url);
+
   @override
   Widget build(BuildContext context) {
     return Card(
       clipBehavior: Clip.hardEdge,
-      elevation: 18,
+      elevation: 12,
       shape: ContinuousRectangleBorder(
         borderRadius: BorderRadius.circular(18),
       ),
@@ -95,7 +93,7 @@ class ContactCard extends StatelessWidget {
               children: [
                 _buildIconRow(
                   icon: Ionicons.map_outline,
-                  text: 'BBOLD, Kompleks Pasar bawah, Tondano',
+                  text: 'BBOLD, Pasar bawah, Tondano',
                   onClick: () =>
                       _launchURL('https://goo.gl/maps/qbMcPTNFkcUrbKDj6'),
                 ),
@@ -157,14 +155,12 @@ class ContactCard extends StatelessWidget {
             SizedBox(
               width: 9,
             ),
-            AutoSizeText(
+            Text(
               text,
               style: textStyleBodySubTitle.copyWith(
                 color: colorTextDark,
               ),
               maxLines: 2,
-              minFontSize: 10,
-              wrapWords: true,
               textAlign: TextAlign.start,
             ),
           ],

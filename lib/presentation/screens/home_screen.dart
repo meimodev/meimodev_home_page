@@ -1,5 +1,5 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../style.dart';
 import '../widgets/responsive_main_layout.dart';
@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: insetSmall,
           ),
-          AutoSizeText(
+          Text(
             'From website to native mobile apps\n'
             'modern design, maintainable code & scalable deploy\n'
             'employ latest tech stack with industry standard',
@@ -43,10 +43,13 @@ class _CallToActionButton extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+  void _launchURL(String url) async => launch(url);
+
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: () => _launchURL(
+          'https://api.whatsapp.com/send/?phone=6289525699078&text=Info:+software+development'),
       padding: EdgeInsets.symmetric(
         horizontal: 18,
         vertical: 19,

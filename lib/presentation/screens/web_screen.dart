@@ -1,5 +1,5 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../style.dart';
 import '../widgets/responsive_main_layout.dart';
@@ -21,9 +21,9 @@ class WebScreen extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(
-            height: insetSmall * .5,
+            height: insetSmall.h * .5,
           ),
-          AutoSizeText(
+          Text(
             // ignore: lines_longer_than_80_chars
             'Build beautiful & interactive Web with latest technology',
             style: textStyleBodySubTitle,
@@ -31,27 +31,30 @@ class WebScreen extends StatelessWidget {
             maxLines: 5,
           ),
           SizedBox(
-            height: insetSmall * .5,
+            height: insetSmall.h * .5,
           ),
-          AutoSizeText(
+          Text(
             // ignore: lines_longer_than_80_chars
             'Build static landing page to Progressive Web App',
             style: textStyleBodySubTitle,
             textAlign: TextAlign.start,
           ),
           SizedBox(
-            height: insetSmall * .5,
+            height: insetSmall.h * .5,
           ),
-          AutoSizeText(
+          Text(
             // ignore: lines_longer_than_80_chars
             'From Web Front-End environment to Back-end environment',
             style: textStyleBodySubTitle,
             textAlign: TextAlign.start,
             maxLines: 5,
           ),
+          SizedBox(
+            height: insetLarge.h,
+          ),
           ..._buildFrontEndRow(),
           SizedBox(
-            height: insetMedium,
+            height: insetMedium.h,
           ),
           ..._buildBackEndRow(),
         ],
@@ -64,16 +67,13 @@ class WebScreen extends StatelessWidget {
 
   List<Widget> _buildFrontEndRow() {
     return [
-      SizedBox(
-        height: insetLarge,
-      ),
       Text(
         'FRONT END TECH STACK',
         style: textStyleBodyTitle,
         textAlign: TextAlign.center,
       ),
       SizedBox(
-        height: insetSmall,
+        height: insetSmall.h,
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -82,31 +82,31 @@ class WebScreen extends StatelessWidget {
             asset: 'assets/images/logo_ts.svg',
           ),
           SizedBox(
-            width: insetSmall,
+            width: insetSmall.h,
           ),
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_react.svg',
           ),
           SizedBox(
-            width: insetSmall,
+            width: insetSmall.h,
           ),
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_flutter.svg',
           ),
           SizedBox(
-            width: insetSmall,
+            width: insetSmall.h,
           ),
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_bulma.svg',
           ),
           SizedBox(
-            width: insetSmall,
+            width: insetSmall.h,
           ),
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_sass.svg',
           ),
           SizedBox(
-            width: insetSmall,
+            width: insetSmall.h,
           ),
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_bootstrap.svg',
@@ -118,50 +118,47 @@ class WebScreen extends StatelessWidget {
 
   List<Widget> _buildBackEndRow() {
     return [
-      SizedBox(
-        height: insetMedium,
-      ),
       Text(
         'BACK END TECH STACK',
         style: textStyleBodyTitle,
         textAlign: TextAlign.center,
       ),
       SizedBox(
-        height: insetSmall,
+        height: insetSmall.h,
       ),
       Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_node.svg',
           ),
-          SizedBox(
-            width: insetSmall,
-          ),
+          // SizedBox(
+          //   width: insetSmall.h,
+          // ),
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_express.svg',
           ),
-          SizedBox(
-            width: insetSmall,
-          ),
+          // SizedBox(
+          //   width: insetSmall.h,
+          // ),
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_laravel.svg',
           ),
-          SizedBox(
-            width: insetSmall,
-          ),
+          // SizedBox(
+          //   width: insetSmall.h,
+          // ),
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_firebase.svg',
           ),
-          SizedBox(
-            width: insetSmall,
-          ),
+          // SizedBox(
+          //   width: insetSmall.h,
+          // ),
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_aws.svg',
           ),
-          SizedBox(
-            width: insetSmall,
-          ),
+          // SizedBox(
+          //   width: insetSmall.h,
+          // ),
           RoundedBackgroundIcon(
             asset: 'assets/images/logo_google_cloud.svg',
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../style.dart';
 import 'global_padding_wrapper.dart';
@@ -19,25 +20,26 @@ class ResponsiveMainLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return GlobalPaddingWrapper(
       child: Padding(
-        padding: const EdgeInsets.all(insetMedium),
+        padding: EdgeInsets.all(insetMedium.w),
         child: LayoutBuilder(
           builder: (context, __) => Flex(
             direction: ScreenSizes(context).isSmallScreen
                 ? Axis.vertical
                 : Axis.horizontal,
-            mainAxisAlignment: MainAxisAlignment.start,
+            // mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Expanded(
                 child: leftChild,
               ),
               SizedBox(
-                width: insetSmall,
-                height: insetSmall,
+                width: insetSmall.w,
               ),
-              Expanded(
-                child: rightChild,
-              )
+              ScreenSizes(context).height < 650
+                  ? SizedBox.shrink()
+                  : Expanded(
+                      child: rightChild,
+                    )
             ],
           ),
         ),

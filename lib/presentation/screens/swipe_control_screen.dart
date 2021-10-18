@@ -30,7 +30,10 @@ class SwipeControlScreen extends StatelessWidget {
           },
           itemCount: _screens.length,
           pagination: SwiperPagination(),
-          control: SwiperControl(),
+          control: SwiperControl(
+            color: colorPrimary,
+            padding: EdgeInsets.all(24),
+          ),
         ),
       ),
     );

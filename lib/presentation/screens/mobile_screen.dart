@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../style.dart';
@@ -23,8 +22,7 @@ class MobileScreen extends StatelessWidget {
           SizedBox(
             height: insetSmall * .5,
           ),
-          AutoSizeText(
-            // ignore: lines_longer_than_80_chars
+          Text(
             'From idea to market published app',
             style: textStyleBodySubTitle,
             textAlign: TextAlign.start,
@@ -33,18 +31,18 @@ class MobileScreen extends StatelessWidget {
           SizedBox(
             height: insetSmall * .5,
           ),
-          AutoSizeText(
-            // ignore: lines_longer_than_80_chars
-            'Experienced with software architecture e.g. Clean Architecture, MVC, MVVM, DDD',
+          Text(
+            'Experienced with software architecture e.g. '
+            'Clean Architecture, MVC, MVVM, DDD',
             style: textStyleBodySubTitle,
             textAlign: TextAlign.start,
           ),
           SizedBox(
             height: insetSmall * .5,
           ),
-          AutoSizeText(
-            // ignore: lines_longer_than_80_chars
-            'Familiar in OOP with SOLID principles & Functional Programming concepts',
+          Text(
+            'Familiar in OOP with SOLID principles & Functional '
+            'Programming concepts',
             style: textStyleBodySubTitle,
             textAlign: TextAlign.start,
             maxLines: 5,

@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs
 import 'package:flutter/material.dart';
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import 'package:get/get.dart';
 
 const String fontFamilyMPlus = 'MPLUSRounded1c';
@@ -26,7 +27,7 @@ class ScreenSizes {
   bool get isLargeScreen => context.width > 1100;
 }
 
-const TextStyle textStyleNavBarMenu = TextStyle(
+TextStyle textStyleNavBarMenu = TextStyle(
   fontFamily: fontFamilyMPlus,
   fontWeight: FontWeight.w400,
   fontSize: 13,
@@ -34,7 +35,7 @@ const TextStyle textStyleNavBarMenu = TextStyle(
   color: colorTextDark,
 );
 
-const TextStyle textStyleNavBarMenuActive = TextStyle(
+TextStyle textStyleNavBarMenuActive = TextStyle(
   fontFamily: fontFamilyMPlus,
   fontWeight: FontWeight.w700,
   fontSize: 13,
@@ -42,20 +43,20 @@ const TextStyle textStyleNavBarMenuActive = TextStyle(
   color: colorPrimary,
 );
 
-const TextStyle textStyleBodyTitle = TextStyle(
+TextStyle textStyleBodyTitle = TextStyle(
   fontFamily: fontFamilyNunitoSans,
   fontWeight: FontWeight.w900,
   fontSize: 16,
   letterSpacing: 1.5,
   color: colorTextDark,
 );
-const TextStyle textStyleBodySubTitle = TextStyle(
+TextStyle textStyleBodySubTitle = TextStyle(
   fontFamily: fontFamilyNunitoSans,
   fontWeight: FontWeight.w400,
   fontSize: 14,
   color: colorTextDark,
 );
-const TextStyle textStyleButton = TextStyle(
+TextStyle textStyleButton = TextStyle(
   fontFamily: fontFamilyNunitoSans,
   fontWeight: FontWeight.w700,
   fontSize: 14,
